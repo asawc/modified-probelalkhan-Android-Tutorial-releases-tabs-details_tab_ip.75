@@ -137,6 +137,7 @@ public class SharedPrefManager {
         public Product getProduct() {
             SharedPreferences sharedPreferencesProduct = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
             return new Product(
+                    sharedPreferencesProduct.getInt(KEY_PRODUCT_ID, -1),
                     sharedPreferencesProduct.getInt(KEY_PRODUCT_QUANTITY, -1),
                     sharedPreferencesProduct.getString(KEY_PRODUCT_NAME, null),
                     sharedPreferencesProduct.getString(KEY_PRODUCT_SYMBOL, null) //,
