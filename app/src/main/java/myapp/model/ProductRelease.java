@@ -9,9 +9,10 @@ public class ProductRelease {
     private final int id;
 
  */
-    @SerializedName("product")
-    private final Product product;
-    @SerializedName("status")
+    @SerializedName("productId")
+    private final int id;
+    //private final Product product;
+    @SerializedName("prod_order_status")
     private final ProductStatus status;
     @SerializedName("requested_quantity")
     private final int req_quantity;
@@ -19,15 +20,16 @@ public class ProductRelease {
 
    // private final int value;
 
-    public ProductRelease(/*int id,*/ Product product, ProductStatus status, int req_quantity) {
+    public ProductRelease(int id, Product product, ProductStatus status, int req_quantity) {
        // this.id = id;
-        this.product = product;
+        this.id = id;
         this.status = status;
         this.req_quantity = req_quantity;
         //status_name = null;
     }
 
     public Product getProduct() {
+        Product product = null;
         return product;
     }
 
