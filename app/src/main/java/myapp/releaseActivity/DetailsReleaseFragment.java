@@ -133,13 +133,9 @@ public class DetailsReleaseFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
-
-
                     }
                 });
             }
-
-
 
             public TextView getIdTextView() {
                 return mIdTextView;

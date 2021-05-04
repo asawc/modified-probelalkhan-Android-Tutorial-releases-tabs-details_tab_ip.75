@@ -94,6 +94,7 @@ public class SharedPrefManager {
     public void productLogin(Product product) {
         SharedPreferences sharedPreferencesProduct = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferencesProduct.edit();
+        editor.putInt(KEY_PRODUCT_ID, product.getId());
         editor.putInt(KEY_PRODUCT_QUANTITY, product.getQuantity());
         editor.putString(KEY_PRODUCT_NAME, product.getName());
         editor.putString(KEY_PRODUCT_SYMBOL, product.getSymbol());
