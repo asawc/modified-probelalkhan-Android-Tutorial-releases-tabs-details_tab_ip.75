@@ -1,7 +1,6 @@
 package myapp.model;
 
 import com.google.gson.annotations.SerializedName;
-import myapp.model.ProductStatus;
 
 public class ProductRelease {
 
@@ -11,7 +10,8 @@ public class ProductRelease {
  */
     @SerializedName("productId")
     private final int id;
-    //private final Product product;
+    @SerializedName("product")
+    private final Product product;
     @SerializedName("prod_order_status")
     private final ProductStatus status;
     @SerializedName("requested_quantity")
@@ -20,8 +20,9 @@ public class ProductRelease {
 
    // private final int value;
 
-    public ProductRelease(int id, Product product, ProductStatus status, int req_quantity) {
+    public ProductRelease(int id, Product product1, ProductStatus status, int req_quantity) {
         this.id = id;
+        this.product = product1;
         //this.product = product;
         this.status = status;
         this.req_quantity = req_quantity;

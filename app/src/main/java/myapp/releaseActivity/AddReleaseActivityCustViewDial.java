@@ -173,8 +173,8 @@ public class AddReleaseActivityCustViewDial extends AppCompatActivity {
                         if(emplChecked) {
                             for (Product prod : productList) {
                                 if (pView.getSymbol().equals(prod.getSymbol()))
-                                    selectedProds.add(new ProductRelease(prod.getId(), prod,
-                                            ProductStatus.awaited, (reqQuantity == null ? 0 : reqQuantity)));
+                                    selectedProds.add(new ProductRelease(prod.getId(), prod/*,
+                                            product1*/, ProductStatus.awaited, (reqQuantity == null ? 0 : reqQuantity)));
                             }
                         }
                     }
@@ -197,7 +197,6 @@ public class AddReleaseActivityCustViewDial extends AppCompatActivity {
 
                                 ResponseContainer<Release> resCon = response.body();
                                 Log.d(getTag(), resCon.getMessage());
-
                             }
                         }
                     );
